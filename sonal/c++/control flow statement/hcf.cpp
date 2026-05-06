@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int a, int b) {
+
+    // Everything divides 0
+    if (a == 0)
+        return b;
+    if (b == 0)
+        return a;
+
+    // If both numbers are equal
+    if (a == b)
+        return a;
+
+    // If a is greater
+    if (a > b)
+      return gcd(a - b, b);
+
+
+    // If b is greater
+    return gcd(a, b - a);
+}
+
+  main() {
+  
+    // Finding gcd of a and b
+
+
+    int a = 10, b = 45;
+    cout << gcd(a, b);
+    return 0;
+}
